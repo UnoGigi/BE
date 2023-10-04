@@ -1,0 +1,33 @@
+GET http://localhost:5050/posts
+
+###
+POST http://localhost:5050/posts/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "sesto post",
+    "category": "categoria uno",
+    "cover": "https://it.images.search.yahoo.com/search/images;_ylt=AwrkODvl2RplgTM1d0Dc5olQ;_ylu=Y29sbwNpcjIEcG9zAzEEdnRpZAMEc2VjA3Nj?p=logo+goolgl&fr=mcafee",
+    "price": "20",
+    "rate": "5",
+    "author":"Fabio"
+}
+
+###
+PATCH http://localhost:5050/posts/update/651ae5386d7c0a255d8686d1
+Content-Type: application/json
+
+{
+    "title": "terzo modificato",
+    "price": "25",
+    "author":"Matteo"
+}
+
+
+###
+DELETE http://localhost:5050/posts/delete/651ae4892a9adadd7056829c
+
+###
+GET http://localhost:5050/posts?page=2&pageSize=2
+
+
